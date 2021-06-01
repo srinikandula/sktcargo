@@ -9,8 +9,6 @@
   "mongo": {
     "host": "localhost",
     "database": "busfareportal",
-    "username":"user",
-    "password":"user",
     "port":27107 ,
     "url3":"?retryWrites=true&w=majority"
   },

@@ -4,8 +4,8 @@ function getUserHome() {
     return process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'];
 }
 
-var localConfigPath = getUserHome() + '/busfareportal-config.json';
-var projectConfigPath = __dirname + '/busfareportal-config.json';
+var localConfigPath = getUserHome() + '/sktcargo-config.json';
+var projectConfigPath = __dirname + '/sktcargo-config.json';
 // var projectConfigPath = __dirname + '/config.json';
 
 if(process.env.NODE_ENV === "test") {
