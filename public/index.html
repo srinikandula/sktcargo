@@ -314,6 +314,11 @@
                   <input type="email" class="form-control" placeholder="Email address" name="email2" id="email2" required>
                 </div>
               </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="tel" class="form-control" placeholder="Phone number" name="mobilenumber" id="mobilenumber" required>
+                </div>
+              </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
@@ -341,6 +346,7 @@
             myBody2.firstname = document.getElementById('firstname').value;
             myBody2.lastname = document.getElementById('lastname').value;
             myBody2.email = document.getElementById('email2').value;
+            myBody2.tel = document.getElementById('mobilenumber').value;
             myBody2.message = document.getElementById('message').value;
   
                 //extract JSON from the http response
@@ -361,6 +367,7 @@
                      document.getElementById('firstname').value = null;
                      document.getElementById('lastname').value = null;
                      document.getElementById('email2').value = null;
+                     document.getElementById('mobilenumber').value = null;
                      document.getElementById('message').value = null;
 
                      var data2 = document.getElementById('contact-2');
@@ -460,7 +467,7 @@
           // }
           myBody.fromcity = document.getElementById('fromcity').value;
           myBody.destinationcity = document.getElementById('destinationcity').value;
-          myBody.email = document.getElementById('email').value;
+          myBody.email = document.gettElementById('email').value;
           myBody.mobilenumber = document.getElementById('mobilenumber').value;
           myBody.contactperson = document.getElementById('contactperson').value;
           myBody.weight = document.getElementById('weight').value;
