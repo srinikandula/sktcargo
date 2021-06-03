@@ -10,9 +10,9 @@ const connectDB = async() => {
         console.error("mongo database is missing");
     } else if(config.mongo.username && config.mongo.password) {
         mongoUrl = "mongodb://"+config.mongo.username+":"+config.mongo.password+"@"
-            +config.mongo.host+":"+config.mongo.host+"/"+config.mongo.database;
+            +config.mongo.host+":"+config.mongo.port+"/"+config.mongo.database;
     } else {
-        mongoUrl = "mongodb://"+config.mongo.host+":"+config.mongo.host+"/"+config.mongo.database;
+        mongoUrl = "mongodb://"+config.mongo.host+":"+config.mongo.port+"/"+config.mongo.database;
     }
     console.log("mongoUrl " + mongoUrl);
     const conn = await mongoose.connect(mongoUrl, {
