@@ -40,7 +40,7 @@ app.use('/api/v1/contactus', contactus);
 
 app.use(errorHandler);
 
-
+console.log("config.PORT  is "+ config.PORT );
 const PORT = config.PORT || 5000;
 
 const server = app.listen(PORT, console.log(`Server running in ${config.NODE_ENV} mode on port ${PORT}`.yellow.bold));
