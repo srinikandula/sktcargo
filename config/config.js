@@ -19,7 +19,7 @@ if(fs.existsSync(localConfigPath)) {
 } else if (fs.existsSync(projectConfigPath)) {
     selectedConfigPath = projectConfigPath;
 } else {
-    console.log('CONFIG FILE DOESNT EXIST @ ' + selectedConfigPath);
+    console.log('CONFIG FILE DOESNT EXIST @ ' + localConfigPath);
     process.exit();
 }
 

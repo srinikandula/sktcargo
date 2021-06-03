@@ -18,13 +18,11 @@ const ContactUs = new mongoose.Schema({
         trim:true,
         maxlength:[50, 'Last Name can not be more than 50 characters'],
     },
-    email:{
+    phonenumber:{
         type:String,
+        required: [true, 'Please Phone number'],
         trim:true,
-        maxlength:[50, 'Email can not be more than 50 characters'],
-        required: [true, 'Email address is required'],
-        validate: [validateEmail, 'Please fill a valid email address'],
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+        maxlength:[10, 'Phone number can not be more than 10 characters'],
     },
     message:{
         type:String,

@@ -9,10 +9,7 @@ const errorHandler = require('./middleware/error');
 
 
 // Load Config File
-const config = require('./config/config.json');
-
-//Load env vars
-dotenv.config({ path: './config/config.json'});
+const config = require('./config/config');
 
 //Connect to database
 connectDB();

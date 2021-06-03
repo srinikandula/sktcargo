@@ -74,20 +74,7 @@
                         </div>
                       </form>
                     </a>
-                  </li>                  
-                  <!-- <div class="container">
-                    <div class="row align-items-center">
-                      <div class="col-lg-6">
-                        <button class="btn btn-primary">For Mango Inquries Please Click Here</button>
-                        <form action="#">
-                          <div class="form-group d-flex">
-                            <input type="text" class="form-control" placeholder="Enter your tracking number">
-                            <input type="submit" class="btn btn-primary text-white px-4" value="Track Now">
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div> -->
+                  </li>
                 </ul>
               </nav>
 
@@ -102,27 +89,16 @@
 
       <div class="ftco-blocks-cover-1">
         <div class="ftco-cover-1" style="background-image: url('https://images.unsplash.com/photo-1605027990121-cbae9e0642df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');">
-          <!-- <div class="container">
-            <div class="row align-items-center">
-              <div class="col-lg-6">
-                <form action="#">
-                  <div class="form-group d-flex">
-                    <input type="text" class="form-control" placeholder="Enter your tracking number">
-                    <input type="submit" class="btn btn-primary text-white px-4" value="Track Now">
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div> -->
+
           <div class="container">
             <div class="row align-items-center">
               <div class="col-lg-6">
                 <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src ="https://www.freshycart.com/wp-content/uploads/2020/06/box-of-mangoes.jpg">
                   <div class="card-body">
-                    <h5 class="card-title">Contact Us</h5>
+                    <h5 class="card-title">Fresh Ulavapadu Banginapalli Mangoes <b>@50Rs</b> per KG. <br><br> Delivery can be done to Hyderabad, Guntur, Vijaywada, Rajahmundry, Eluru, Vishakapatnam </h5>
                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    <a href="#contact-section" class="btn btn-primary">Order Now!</a>
+                    <a href="#contact-section" class="btn btn-primary">Send your order inquiry!</a>
                   </div>
                 </div>
               </div>
@@ -301,21 +277,16 @@
                   <input type="text" class="form-control" placeholder="Last name" name="lastname" id="lastname" required>
                 </div>
               </div>
-
               <div class="form-group row">
                 <div class="col-md-12">
-                  <input type="email" class="form-control" placeholder="Email address" name="email2" id="email2" required>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="tel" class="form-control" placeholder="Phone number" name="mobilenumber" id="mobilenumber" required>
+                  <input type="tel" class="form-control" placeholder="Phone number" name="phonenumber" id="phonenumber" required>
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
                   <textarea  class="form-control" placeholder="Write your message." cols="30" rows="10" name="message" id="message" required></textarea>
+                   * We will contact you soon for order confirmation
                 </div>
               </div>
               <div class="form-group row">
@@ -332,20 +303,15 @@
 
           <script type="text/javascript">
             function contactus(){
-            var myBody2 ={};
-
-            myBody2.firstname = document.getElementById('firstname').value;
-            myBody2.lastname = document.getElementById('lastname').value;
-            myBody2.email = document.getElementById('email2').value;
-            myBody2.tel = document.getElementById('mobilenumber').value;
-            myBody2.message = document.getElementById('message').value;
+              var myBody2 ={};
+              myBody2.firstname = document.getElementById('firstname').value;
+              myBody2.lastname = document.getElementById('lastname').value;
+              myBody2.phonenumber = document.getElementById('phonenumber').value;
+              myBody2.message = document.getElementById('message').value;
+              saveContactUs(myBody2);
+            }
   
-                //extract JSON from the http response
-              // do something with myJson
-              adddata2(myBody2);
-              }
-  
-              const adddata2 = async (myBody) => {
+              const saveContactUs = async (myBody) => {
                   let response = fetch('/api/v1/contactus',{
                     method:'POST',
                     headers:{'Content-Type':'application/json'},
@@ -357,8 +323,7 @@
                      data.classList.add('d-none');
                      document.getElementById('firstname').value = null;
                      document.getElementById('lastname').value = null;
-                     document.getElementById('email2').value = null;
-                     document.getElementById('mobilenumber').value = null;
+                     document.getElementById('phonenumber').value = null;
                      document.getElementById('message').value = null;
 
                      var data2 = document.getElementById('contact-2');
