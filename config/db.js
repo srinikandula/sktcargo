@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 config = require('./config.json');
 const connectDB = async() => {
-    console.log(config.mongo.host + config.username + config.password + config.mongo.url2 + config.db)
+    console.log(config.mongo.host + config.username + config.password + config.db)
     let mongoUrl = "mongodb://localhost/cargo"
     if(!config.mongo.host) {
         console.error("mongo host is missing");

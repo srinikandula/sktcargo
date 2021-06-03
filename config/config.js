@@ -12,12 +12,14 @@ if(process.env.NODE_ENV === "test") {
     projectConfigPath = __dirname + '/test_config.json';
 }
 
-var selectedConfigPath;
+var selectedConfigPath = localConfigPath;
 
 if(fs.existsSync(localConfigPath)) {
     selectedConfigPath = localConfigPath;
+    console.log("loading from "+ localConfigPath)
 } else if (fs.existsSync(projectConfigPath)) {
     selectedConfigPath = projectConfigPath;
+    console.log("loading from "+ projectConfigPath)
 } else {
     console.log('CONFIG FILE DOESNT EXIST @ ' + localConfigPath);
     process.exit();
