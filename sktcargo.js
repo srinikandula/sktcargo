@@ -1,7 +1,9 @@
 const express = require('express');
 const fs = require('fs');
 const connectDB = require('./config/db');
+const dotenv = require('dotenv');
 const morgan = require('morgan');
+const colors = require('colors');
 const errorHandler = require('./middleware/error');
 
 
@@ -41,7 +43,7 @@ app.use(errorHandler);
 console.log("config.PORT  is "+ config.PORT );
 const PORT = config.PORT || 5000;
 
-const server = app.listen(PORT, console.log(`Server running in ${config.NODE_ENV} mode on port ${PORT}`));
+const server = app.listen(PORT, console.log(`Server running in ${config.NODE_ENV} mode on port ${PORT}`.yellow.bold));
 
 
 process.on('unhandledRejection', (err, promise) => {
