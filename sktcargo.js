@@ -1,9 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const connectDB = require('./config/db');
-const dotenv = require('dotenv');
-const morgan = require('morgan'); 
-const colors = require('colors');
+const morgan = require('morgan');
 const errorHandler = require('./middleware/error');
 
 
