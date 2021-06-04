@@ -41,7 +41,7 @@ app.use(errorHandler);
 console.log("config.PORT  is "+ config.PORT );
 const PORT = config.PORT || 5000;
 
-const server = app.listen(PORT, console.log(`Server running in ${config.NODE_ENV} mode on port ${PORT}`.yellow.bold));
+const server = app.listen(PORT, console.log(`Server running in ${config.NODE_ENV} mode on port ${PORT}`));
 
 
 process.on('unhandledRejection', (err, promise) => {
